@@ -49,6 +49,7 @@ public class MainContactsActivity extends AppCompatActivity {
             @Override
             public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
                 Log.i("Un text", charSequence + "");
+
                 ArrayList<ContactsCard> searchList = new ArrayList<ContactsCard>();
 
                 for (int j = 0; j < listOfContacts.size(); j++) {

@@ -34,8 +34,10 @@ public class AddContactsFragment extends DialogFragment {
         final View mainFragmentView = inflater.inflate(R.layout.fragment_add_contacts, container, false);
         storeName = mainFragmentView.findViewById(R.id.StoreNameID);
         storeNumber = mainFragmentView.findViewById(R.id.StoreNumberID);
+
         Button addButton = mainFragmentView.findViewById(R.id.ButtonStoreID);
         Button cancelButton = mainFragmentView.findViewById(R.id.ButtonCancelID);
+
         final DialogFragment thisFragment = this;
 
 
@@ -52,6 +54,7 @@ public class AddContactsFragment extends DialogFragment {
             public void onClick(View view) {
                 String name = storeName.getText().toString();
                 String number = storeNumber.getText().toString();
+
                 if (name.isEmpty() || number.isEmpty()) {
                     Toast.makeText(getContext(), "Invalid entry !", Toast.LENGTH_SHORT).show();
                 } else {
